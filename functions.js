@@ -35,9 +35,39 @@ users.forEach((val,idx,users) => {
 });
 
 let nums = [44,45,46];
+let newarra1= nums.map((val)=>{return val});//map is used to create a new array.
+console.log(newarra1);
 
-nums.forEach((nums)=>{console.log(nums*nums);});// using arrow functions with foreach statement
+nums.forEach((nums)=>{console.log(nums*nums);});// using arrow functions with foreach statement.
 
 function calcsquarefunction (nums) { console.log (nums*nums);}
 
 nums.forEach(calcsquarefunction);
+
+let arr2= [100,300,200,400,25];// filter is also used for array only it reduces the if condition and filters it.
+let evenarray = arr2.filter((arr2)=>{
+    return arr2 % 2 === 0 ;} )
+
+console.log(evenarray);
+
+let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+
+let nameCount = names.reduce((accumulator, currentValue) => {
+    if (currentValue in accumulator) {
+        accumulator[currentValue]++;
+    } else {
+        accumulator[currentValue] = 1;
+    }
+    return accumulator;
+}, {});
+
+console.log(nameCount); // { Alice: 2, Bob: 1, Tiff: 1, Bruce: 1 }
+
+let numbers1 = [1, 2, 3, 4, 5];
+
+let sum = numbers1.reduce((a, b) => {
+    return a+b;
+}, 0);
+
+console.log(sum); // 15
+
